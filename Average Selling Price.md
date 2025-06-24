@@ -12,7 +12,7 @@ LEFT JOIN UnitsSold U
     AND U.purchase_date BETWEEN P.start_date AND P.end_date
 GROUP BY P.product_id;**
 ---
-حساب متوسط السعر لكل منتج ولكن لو المنتج ماتباعش هنستبدل قيمته ب##0##
+##حساب متوسط السعر لكل منتج ولكن لو المنتج ماتباعش هنستبدل قيمته ب0##
 
 COALESCE(
             ROUND(
