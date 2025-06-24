@@ -1,9 +1,10 @@
+```sql
 SELECT *
 FROM Cinema
 WHERE id %2 <> 0
 AND description not in ('boring')
 ORDER BY rating desc
-
+```
 ---
 هنحدد الid اللي رقمه فردي بس 
 WHERE id %2 <> 0 
