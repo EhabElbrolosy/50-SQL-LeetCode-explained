@@ -1,4 +1,4 @@
-```
+```sql
 select
     P.product_id,
     COALESCE(
@@ -15,7 +15,7 @@ GROUP BY P.product_id;
 ```
 حساب متوسط السعر لكل منتج ولكن لو المنتج ماتباعش هنستبدل قيمته ب0
 
-```COALESCE(
+```sql COALESCE(
             ROUND(
                 (SUM(price * units))::numeric / NULLIF(SUM(units),0)
             ,2)
