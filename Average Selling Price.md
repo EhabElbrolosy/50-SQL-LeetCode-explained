@@ -1,4 +1,4 @@
-**select
+select
     P.product_id,
     COALESCE(
             ROUND(
@@ -10,7 +10,7 @@ FROM prices P
 LEFT JOIN UnitsSold U 
     ON P.product_id = U.product_id 
     AND U.purchase_date BETWEEN P.start_date AND P.end_date
-GROUP BY P.product_id;**
+GROUP BY P.product_id;
 ---
 ##حساب متوسط السعر لكل منتج ولكن لو المنتج ماتباعش هنستبدل قيمته ب0##
 
