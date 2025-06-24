@@ -5,7 +5,6 @@ WHERE id %2 <> 0
 AND description not in ('boring')
 ORDER BY rating desc
 ```
----
 هنحدد الid اللي رقمه فردي بس 
 ```sql
 WHERE id %2 <> 0
