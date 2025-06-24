@@ -13,15 +13,15 @@ LEFT JOIN UnitsSold U
     AND U.purchase_date BETWEEN P.start_date AND P.end_date
 GROUP BY P.product_id;
 ```
----
-##حساب متوسط السعر لكل منتج ولكن لو المنتج ماتباعش هنستبدل قيمته ب0##
+حساب متوسط السعر لكل منتج ولكن لو المنتج ماتباعش هنستبدل قيمته ب0
 
-COALESCE(
+```COALESCE(
             ROUND(
                 (SUM(price * units))::numeric / NULLIF(SUM(units),0)
             ,2)
         ,0)
     AS average_price
+```
 
 - في حالة لو المنتج ماتباعش هنبدل القيمة ب 0 ف هنستخدم (0,...)COALESCE 
 
