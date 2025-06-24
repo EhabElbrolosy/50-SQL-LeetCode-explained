@@ -14,7 +14,7 @@ ORDER BY user_id
 عشان نحدد اول حرف في الكلمة فقط هنستخدم ```LEFT(name,1)```  بعدين نحطها داخل UPPER() كدا اول حرف بس هيكون Capital
 عايزين نخلي بقية الكلمة small. هنستخدم SUBSTRING عشان نستخرج عدد معين من الحروف من الكلمة 
 ```sql
-SUBSTRING(name,2,length(name)-1
+SUBSTRING(name,2,length(name)-1)
 ```
 ال2 هي رقم الcharacter اللي هيبدأ من عنده تحديد الحروف
 ```,length(name)-1``` دا عدد الحروف هينتهي عندها 
