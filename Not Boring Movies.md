@@ -7,7 +7,6 @@ ORDER BY rating desc
 ```
 ---
 هنحدد الid اللي رقمه فردي بس 
-```sql
-WHERE id %2 <> 0 ```
+sql``` WHERE id %2 <> 0```
 
 يعني باقي قسمة الid على 2 لا يساوي 0
