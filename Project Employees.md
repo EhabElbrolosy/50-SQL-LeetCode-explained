@@ -40,3 +40,22 @@ GROUP BY project_id
                                         | ---------- | ------------- |
                                         | 1          | 2             |
                                         | 2          | 2.5           |
+---
+# نفس الحل باستخدام CTE
+```sql
+WITH CTE as(
+SELECT
+    project_id,
+    E.employee_id,
+    SUM(experience_years)/COUNT(E.employee_id) as years
+FROM 
+    Project P JOIN Employee E
+ON P.employee_id = E.employee_id
+GROUP BY project_id, E.employee_id
+)
+select 
+    project_id, 
+    round(sum(years)/ count(employee_id),2) as average_years
+FROM CTE
+GROUP BY project_id
+```
