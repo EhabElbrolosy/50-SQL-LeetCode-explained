@@ -1,4 +1,4 @@
-## Consecutive Numbers
+##_Consecutive Numbers_
 
 ```sql
 WITH CTE as(
