@@ -1,3 +1,5 @@
+## _Not Boring Movies_
+
 ```sql
 SELECT *
 FROM Cinema
