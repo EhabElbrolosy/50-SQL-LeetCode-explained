@@ -1,4 +1,4 @@
-## _Average Selling Price_##
+## _Average Selling Price_
 
 ```sql
 select
