@@ -1,3 +1,5 @@
+## _Fix Names in a Table_
+
 ```sql
 SELECT
     user_id,
