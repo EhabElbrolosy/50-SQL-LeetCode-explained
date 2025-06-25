@@ -19,3 +19,14 @@ FROM Triangle
 ومجموع الاول والتالت اكبر من التاني
 ```Then``` الشكل مثلث
 ```Else``` مش مثلث_
+
+---
+
+ممكن نحلها باستخدام if بدل من case كدا
+```sql
+# Write your MySQL query statement below
+SELECT *, 
+  IF(x + y > z AND y + z > x AND z + x > y, 'Yes', 'No') AS triangle 
+FROM Triangle;
+```
+لكن الحل دا مش مدعوم في postgresql موجود بس في my sql و sql server تقريبا
