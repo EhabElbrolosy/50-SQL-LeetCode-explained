@@ -23,7 +23,7 @@ GROUP BY project_id
 يعني بدل ما سنوات الخبرة متجمعة لكل موظف داخل المشروعين, احنا هنجمعهم لكل مشروع ```GROUP BY project_id```
 
 ---
-                                                         التجميع على مستوى الموظفين (داخل Subquery)
+                                               التجميع على مستوى الموظفين (داخل Subquery)
                                                     
                                     | project_id | employee_id | years |
                                     | ---------- | ----------- | ----- |
@@ -34,7 +34,7 @@ GROUP BY project_id
                                     | 1          | 3           | 1     |
 ---
                                                     
-                                                             التجميع على مستوى الproject
+                                                  التجميع على مستوى الproject
                                                          
                                         | project_id | average_years |                               
                                         | ---------- | ------------- |
