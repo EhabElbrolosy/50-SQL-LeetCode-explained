@@ -1,7 +1,7 @@
 # _Percentage Of Users Attended a Contest_
 
 
-```
+```sql
 DECLARE @total_students int
 select @total_students = count(*) from Users;
 
