@@ -1,8 +1,7 @@
 ## _Triangle judgment_ ##
 
 ``` sql
-select 
-    *,
+select *,
     Case
         WHEN (x + y > z) and (x + z > y) and (y + z > x) THEN 'Yes'
         Else 'No'
