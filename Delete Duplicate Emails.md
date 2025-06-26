@@ -13,6 +13,5 @@ WHERE id in (
     WHERE num > 1 
 )
 ```
-## ليها طرق كتيرة بس اللي استخدمته كان windows function باستخدام row_number  
+```## ليها طرق كتيرة بس اللي استخدمته كان windows function باستخدام row_number  ```
 
-<p> align ="center" ## ليها طرق كتيرة بس اللي استخدمته كان windows function باستخدام row_number  </p>
