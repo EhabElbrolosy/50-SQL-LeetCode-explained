@@ -13,7 +13,7 @@ SELECT
 FROM USERS
 ORDER BY user_id
 ```
-عشان نحدد اول حرف في الكلمة فقط هنستخدم ```LEFT(name,1)```  بعدين نحطها داخل UPPER() كدا اول حرف بس هيكون Capital
+عشان نحدد اول حرف في الكلمة فقط هنستخدم ```LEFT(name,1)```  بعدين نحطها داخل ```()UPPER``` كدا اول حرف بس هيكون Capital
 عايزين نخلي بقية الكلمة small. هنستخدم SUBSTRING عشان نستخرج عدد معين من الحروف من الكلمة 
 ```sql
 SUBSTRING(name,2,length(name)-1)
