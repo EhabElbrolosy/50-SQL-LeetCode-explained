@@ -23,7 +23,7 @@
 
  ---
 
-### 2.ترتيب التنفيذ في sql
+### 2.Execution order in sql
 FROM / JOIN ---> WHERE ---> GROUP BY ---> HAVING ---> SELECT ---> ORDER BY
 
 ---
@@ -53,11 +53,23 @@ DELETE FROM Person WHERE id IN (
 ```
 ---
 
-### 5. Alias name
+### 5. Alias name for subquery
    لما بعمل subquery داخل  FROM  لازم أديها alias name وإلا هتطلعلك error
 ```sql
 select * from (select name from table) as alisa_name
 ```
 عشان كدا بيتعامل مع الsubquery على انه جدول مؤقت ولازم يكون الجدول له اسم
----
 
+---
+### 6. Declaring a variable (SQL server)
+في العادي لما بنفترض variable بقيمة معينة بنكتب ```set @variable = value``` ولتكن رقم ثابت مثلا
+بس لو عايزين الvalue دي تبقى query هنكتب 
+```sql
+select @variable = select col1,col2 from table_name
+```
+---
+### 7.Case order
+
+لو بنكتب case أي استثناء أو حالة شاذة لازم يتحط في الأول عشان ما يتغطاش بالشروط اللي قبله
+
+---
