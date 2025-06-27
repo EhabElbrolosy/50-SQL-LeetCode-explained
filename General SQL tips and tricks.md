@@ -58,7 +58,7 @@ DELETE FROM Person WHERE id IN (
 ```sql
 select * from (select name from table) as alisa_name
 ```
-عشان كدا بيتعامل مع الsubquery على انه جدول مؤقت ولازم يكون الجدول له اسم
+عشان بيتعامل مع الsubquery على انه جدول مؤقت ولازم يكون الجدول له اسم
 
 ---
 ### 6. Declaring a variable (SQL server)
