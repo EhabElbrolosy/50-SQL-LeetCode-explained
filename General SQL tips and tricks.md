@@ -36,3 +36,28 @@ FROM / JOIN ---> WHERE ---> GROUP BY ---> HAVING ---> SELECT ---> ORDER BY
 SELECT name, id, COUNT(*) FROM table_name GROUP BY name, id;
 ```
 الname, id مكتوبين مع select ومع group by 
+---
+
+###  4.remove duplicates
+لو عايز تحذف الصفوف المكررة وتسيب أول صف بس ممكن استخدم ROW_NUMBER() وفلتر على اللي رقمه أكر من 1
+ولازم تحطها في CTE أو subquery.
+```sql
+WITH CTE AS (
+  SELECT *, ROW_NUMBER() OVER (PARTITION BY email ORDER BY id) AS rn
+  FROM Person
+)
+DELETE FROM Person WHERE id IN (
+  SELECT id FROM CTE WHERE rn > 1
+);
+```
+___
+---
+
+### 5. Alias name
+   لما بعمل subquery داخل  FROM  لازم أديها alias name وإلا هتطلعلك error
+```sql
+select * from (select name from table) as alisa_name
+```
+عشان كدا بيتعامل مع الsubquery على انه جدول مؤقت ولازم يكون الجدول له اسم
+---
+
