@@ -73,3 +73,16 @@ select @variable = select col1,col2 from table_name
 لو بنكتب case أي استثناء أو حالة شاذة لازم يتحط في الأول عشان ما يتغطاش بالشروط اللي قبله
 
 ---
+
+### calculating median
+
+لو عايز احسب الmedian او الوسيط هستخدم ```percentile_cont(0.5) within group```
+```sql
+SELECT 
+  PERCENTILE_CONT(0.5) WITHIN GROUP (ORDER BY column_name) AS median_value
+FROM 
+  table_name;
+```
+ونفس الحال لو عايز احسب الربع الاول هستبدل ال (0.5) بـ (0.25)
+
+---
