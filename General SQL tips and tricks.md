@@ -94,8 +94,10 @@ FROM
 عشان كدا لو حبينا نحسب عدد الnulls في عمود معين (مثلا name) هنقول 
 '''sql
 select count(*) - count(name) from ...
+
 '''
 دا هيطلع عدد القيم الnull بس
+
 ---
 
 ### 9.Join types
