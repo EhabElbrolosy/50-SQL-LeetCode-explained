@@ -22,3 +22,9 @@
  يعني لو عندك 6 صفوف وقلت NTILE(3) هتكون: 1, 1, 2, 2, 3, 3
 
  ---
+
+### 2.ترتيب التنفيذ في sql
+FROM / JOIN ---> WHERE ---> GROUP BY ---> HAVING ---> SELECT ---> ORDER BY
+
+---
+
