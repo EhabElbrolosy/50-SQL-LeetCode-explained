@@ -1,4 +1,4 @@
-### 1. Row_Number() VS RANK() VS DENSRANK() VS NTILE
+### 1. Row_Number() | RANK() | DENSRANK | NTILE
 
 ➖Row_number():
 
