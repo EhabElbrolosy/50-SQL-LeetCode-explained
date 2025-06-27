@@ -1,4 +1,4 @@
-# 50-SQL-LeetCode-explained
+# 50 SQL LeetCode explained in Arabic 
 ## 👋 Welcome!
 
  _This repository provides solutions and Arabic explanations for the 50 SQL problems on LeetCode._
