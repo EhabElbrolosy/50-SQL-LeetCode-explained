@@ -74,7 +74,7 @@ select @variable = select col1,col2 from table_name
 
 ---
 
-### calculating median
+### 8.calculating median
 
 لو عايز احسب الmedian او الوسيط هستخدم ```percentile_cont(0.5) within group```
 ```sql
