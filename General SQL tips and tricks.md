@@ -86,3 +86,7 @@ FROM
 ونفس الحال لو عايز احسب الربع الاول هستبدل ال (0.5) بـ (0.25)
 
 ---
+
+### 9.Join types
+
+![Joins types](https://images.app.goo.gl/UiXS1)
