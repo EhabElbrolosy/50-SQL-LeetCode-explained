@@ -87,6 +87,17 @@ FROM
 
 ---
 
+### 9.counting NULL values
+
+كل دوال التجميع زي sum, avg, count بتتجاهل الnulls 
+معادا count(*) دي بتعد كل الصفوف حتى لو كانت null
+عشان كدا لو حبينا نحسب عدد الnulls في عمود معين (مثلا name) هنقول 
+'''sql
+select count(*) - count(name) from ...
+'''
+دا هيطلع عدد القيم الnull بس
+---
+
 ### 9.Join types
 
 ![Joins types](https://images.app.goo.gl/UiXS1)
