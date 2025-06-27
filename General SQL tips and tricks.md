@@ -1,4 +1,5 @@
-### 1. Row_Number() | RANK() | DENSRANK | NTILE
+
+### 1. Row_Number() VS RANK() VS DENSRANK VS NTILE
 
 ➖Row_number():
 
@@ -36,6 +37,7 @@
 SELECT name, id, COUNT(*) FROM table_name GROUP BY name, id;
 ```
 الname, id مكتوبين مع select ومع group by 
+## _لكن القاعدة دي مش ضرورية في MY SQL ممكن اعمل group by باعمدة مش موجودة في الselect في mysql فقططط_
 
 ---
 
@@ -102,4 +104,5 @@ select count(*) - count(name) from...
 
 ### 10.Join types
 
-![Joins types](https://images.app.goo.gl/UiXS1)
+![Joins types](https://github.com/user-attachments/assets/e2bf8b95-fa1c-4911-92db-6b4411cec14a)
+
