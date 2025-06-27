@@ -36,6 +36,7 @@ FROM / JOIN ---> WHERE ---> GROUP BY ---> HAVING ---> SELECT ---> ORDER BY
 SELECT name, id, COUNT(*) FROM table_name GROUP BY name, id;
 ```
 الname, id مكتوبين مع select ومع group by 
+
 ---
 
 ###  4.remove duplicates
@@ -50,7 +51,6 @@ DELETE FROM Person WHERE id IN (
   SELECT id FROM CTE WHERE rn > 1
 );
 ```
-___
 ---
 
 ### 5. Alias name
