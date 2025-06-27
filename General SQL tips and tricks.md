@@ -28,3 +28,11 @@ FROM / JOIN ---> WHERE ---> GROUP BY ---> HAVING ---> SELECT ---> ORDER BY
 
 ---
 
+### 3.GROUP BY 
+
+لو هتستخدم GROUP BY، يبقى لازم كل الأعمدة اللي في SELECT (ماعدا دوال التجميع) تكون مكتوبة في GROUP BY برده 
+يعني مثلا
+```sql
+SELECT name, id, COUNT(*) FROM table_name GROUP BY name, id;
+```
+الname, id مكتوبين مع select ومع group by 
