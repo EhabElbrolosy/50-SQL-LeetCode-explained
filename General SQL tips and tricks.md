@@ -76,6 +76,13 @@ select @variable = select col1,col2 from table_name
 
 ---
 
+### 8.second highest value
+لو عايز اجيب تاني أعلى قيمة مممن استخدم offset
+```sql
+select max(id) from student offest 1
+```
+كدا هيعمل skip لأول قيمة ويخش في اللي بعدها 
+
 ### 8.calculating median
 
 لو عايز احسب الmedian او الوسيط هستخدم ```percentile_cont(0.5) within group```
