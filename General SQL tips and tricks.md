@@ -79,7 +79,7 @@ CONCAT()
 
 CAST()
 
-بتغير الformat بتاع العمود لأي صيغة ممكن نخلي نص او تاريخ او decimal او اي حاجة ```CAST(column_name) AS Varchar(50)```
+بتغير الformat بتاع العمود لأي صيغة ممكن نخلي نص او تاريخ او decimal او اي حاجة ```CAST(column_name AS VARCHAR(50)))```
 
 
 ---
