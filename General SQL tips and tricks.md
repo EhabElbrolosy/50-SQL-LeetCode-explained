@@ -1,23 +1,23 @@
 
 ### 1. Row_Number() VS RANK() VS DENSRANK VS NTILE
 
-➖Row_number():
+Row_number():
 
 
 بيدي رقم فريد لكل صف بناءً على الترتيب لأنه بيتجاهل أي تكرار في القيم
 1, 2, 3, 4
  
-➖RANK():
+RANK():
 
 بيدي نفس الرقم للصفوف اللي ليها نفس القيمة، يعني ما بيتجاهلش التكرارات بس بيحصل قفزة في الترتيب بعد التكرار.
  1, 2, 2, 4
 
-➖DENSE_RANK():
+DENSE_RANK():
 
 زي RANK() ما بيتجاهلش التكرارات، لكن مش بيعمل قفز في الأرقام، الترتيب بيكمل زي ماهو
  1, 2, 2, 3
 
-➖NTILE(n):
+NTILE(n):
 
 بيقسم الصفوف إلى n مجموعات متساوية أو قريبة في العدد، كل مجموعة بتاخد رقم حسب ترتيبها
  يعني لو عندك 6 صفوف وقلت NTILE(3) هتكون: 1, 1, 2, 2, 3, 3
@@ -55,7 +55,7 @@ DELETE FROM Person WHERE id IN (
 ```
 ---
 
-### 5. Alias name for subquery
+### 5.Alias name for subquery
    لما بعمل subquery داخل  FROM  لازم أديها alias name وإلا هتطلعلك error
 ```sql
 select * from (select name from table) as alisa_name
@@ -79,11 +79,13 @@ select @variable = select col1,col2 from table_name
 ### 8.second highest value
 لو عايز اجيب تاني أعلى قيمة مممن استخدم offset
 ```sql
-select max(id) from student offest 1
+SELECT id FROM student
+ORDER BY id DESC
+OFFSET 1 LIMIT 1;
 ```
 كدا هيعمل skip لأول قيمة ويخش في اللي بعدها 
 
-### 8.calculating median
+### 9.calculating median
 
 لو عايز احسب الmedian او الوسيط هستخدم ```percentile_cont(0.5) within group```
 ```sql
@@ -92,11 +94,11 @@ SELECT
 FROM 
   table_name;
 ```
-ونفس الحال لو عايز احسب الربع الاول هستبدل ال (0.5) بـ (0.25)
+ونفس الحال لو عايز احسب الربع الاول مثلا هستبدل ال (0.5) بـ (0.25)
 
 ---
 
-### 9.counting NULL values
+### 10.counting NULL values
 
 كل دوال التجميع زي sum, avg, count بتتجاهل الnulls 
 معادا count(*) دي بتعد كل الصفوف حتى لو كانت null
@@ -109,7 +111,7 @@ select count(*) - count(name) from...
 
 ---
 
-### 10.Join types
+### 11.Join types
 
 ![Joins types](https://github.com/user-attachments/assets/e2bf8b95-fa1c-4911-92db-6b4411cec14a)
 
