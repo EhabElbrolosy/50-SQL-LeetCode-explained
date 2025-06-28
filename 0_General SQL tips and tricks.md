@@ -222,8 +222,14 @@ select count(*) - count(name) from...
 دا هيطلع عدد القيم الnull بس
 
 ---
+### 13.WHERE clause and nulls
 
-### 13.Join types
+جملة WHERE مش تعرض الصفوف اللي نتيجة الشرط فيها NULL، لأنها تعتبرها UNKNOWN مش TRUE
+لو عايز تظهر الصفوف اللي فيها NULL، لازم تستخدم IS NULL أو IS NOT NULL
+
+---
+
+### 14.Join types
 
 ![Joins types](https://github.com/user-attachments/assets/e2bf8b95-fa1c-4911-92db-6b4411cec14a)
 
