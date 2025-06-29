@@ -33,8 +33,9 @@ OFFSET 1 LIMIT 1
 ```sql
 SELECT nullif( (select ...... ),null) as SecondHighestSalary
 ```
-كدا هخليه يعرض في الoutput ```null``` 
-استخدام nullif() : لو القيمة الاولى دي بتساوي القيمة التانية اعرض null
+كدا هخليه يعرض في الناتج ```null``` 
+
+استخدام nullif() : لو value_1 دي بتساوي value_2 اعرض null
 ```nullif(value_1, value_2)```
 
 ---
@@ -49,3 +50,4 @@ SELECT nullif( (select ...... ),null) as SecondHighestSalary
       FROM Employee
   );
 ```
+اكبر salary لا يساوي max(salary)
