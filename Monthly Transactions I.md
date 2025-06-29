@@ -65,4 +65,4 @@ coalesce(sum(case when state ='approved' then amount end),0)
 
 ---
 
-في الاخر هنعمل group by بكل الاعمدة اللي ظهرت مع الaggregation functions اللي هم month, country
+## في الاخر هنعمل group by بكل الاعمدة اللي ظهرت مع الaggregation functions اللي هم month, country
