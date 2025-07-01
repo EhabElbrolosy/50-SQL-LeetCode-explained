@@ -23,7 +23,7 @@ NTILE(n):
  يعني لو عندك 6 صفوف وقلت NTILE(3) هتكون: 1, 1, 2, 2, 3, 3
 
  ---
-### 2.String functions (SQL SERVER)
+### 2. String functions (SQL SERVER)
 
 LEN()
 
@@ -136,12 +136,12 @@ DATEPART و DATENAME بيشتغلوا على أي تاريخ، مش بس الت�
 
 
 ---
-### 4.Execution order in sql
+### 4. Execution order in sql
 ```FROM / JOIN ---> WHERE ---> GROUP BY ---> HAVING ---> SELECT ---> ORDER BY```
 
 ---
 
-### 5.GROUP BY 
+### 5. GROUP BY 
 
 لو هتستخدم GROUP BY، يبقى لازم كل الأعمدة اللي في SELECT (ماعدا دوال التجميع) تكون مكتوبة في GROUP BY برده 
 يعني مثلا
@@ -153,7 +153,7 @@ SELECT name, id, COUNT(*) FROM table_name GROUP BY name, id;
 
 ---
 
-### 6.SQL Typing Pattern
+### 6. SQL Typing Pattern
 
  ترتيب الكتابة بيبقى 
  ```WHERE ---> GROUP BY ---> HAVING ---> ORDER BY ---> LIMIT ```
@@ -162,7 +162,7 @@ SELECT name, id, COUNT(*) FROM table_name GROUP BY name, id;
  
  ---
 
-###  7.remove duplicates
+###  7. remove duplicates
 لو عايز تحذف الصفوف المكررة وتسيب أول صف بس ممكن استخدم ROW_NUMBER() وفلتر على اللي رقمه أكر من 1
 ولازم تحطها في CTE أو subquery.
 ```sql
@@ -176,7 +176,7 @@ DELETE FROM Person WHERE id IN (
 ```
 ---
 
-### 8.Alias name for subquery
+### 8. Alias name for subquery
    لما بعمل subquery داخل  FROM  لازم أديها alias name وإلا هتطلعلك error
 ```sql
 select * from (select name from table) as alisa_name
@@ -191,13 +191,13 @@ select * from (select name from table) as alisa_name
 select @variable = select col1,col2 from table_name
 ```
 ---
-### 10.Case order
+### 10. Case order
 
 لو بنكتب case أي استثناء أو حالة شاذة لازم يتحط في الأول عشان ما يتغطاش بالشروط اللي قبله
 
 ---
 
-### 11.second highest value
+### 11. second highest value
 لو عايز اجيب تاني أعلى قيمة مممن استخدم offset
 ```sql
 SELECT id FROM student
@@ -207,7 +207,7 @@ OFFSET 1 LIMIT 1;
 كدا هيعمل skip لأول قيمة ويخش في اللي بعدها 
 
 ---
-### 12.LEAST() and GREATEST()
+### 12. LEAST() and GREATEST()
 
 LEAST(a, b)
 
@@ -227,7 +227,7 @@ MAX(col)
 
 
 ---
-### 13.calculating median
+### 13. calculating median
 
 لو عايز احسب الmedian او الوسيط هستخدم ```percentile_cont(0.5) within group```
 ```sql
@@ -240,7 +240,7 @@ FROM
 
 ---
 
-### 14.counting NULL values
+### 14. counting NULL values
 
 كل دوال التجميع زي sum, avg, count بتتجاهل الnulls 
 معادا count(*) دي بتعد كل الصفوف حتى لو كانت null
@@ -252,14 +252,14 @@ select count(*) - count(name) from...
 دا هيطلع عدد القيم الnull بس
 
 ---
-### 15.WHERE clause and nulls
+### 15. WHERE clause and nulls
 
 جملة WHERE مش تعرض الصفوف اللي نتيجة الشرط فيها NULL، لأنها تعتبرها UNKNOWN مش TRUE
 لو عايز تظهر الصفوف اللي فيها NULL، لازم تستخدم IS NULL أو IS NOT NULL
 
 ---
 
-### 16.Join types
+### 16. Join types
 
 ![Joins types](https://github.com/user-attachments/assets/e2bf8b95-fa1c-4911-92db-6b4411cec14a)
 
