@@ -51,7 +51,7 @@ WHERE TO_CHAR(created_at, 'yyyy-mm') = '2020-02'
 
 لو شغال sql server : 
 ```sql
-`WHERE FORMAT(created_at, 'yyyy-MM') = '2020-02'
+WHERE FORMAT(created_at, 'yyyy-MM') = '2020-02
 ```
 
 طريقة تانية باستخدام like
