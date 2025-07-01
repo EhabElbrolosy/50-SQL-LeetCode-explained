@@ -261,5 +261,7 @@ select count(*) - count(name) from...
 
 ### 16. Join types
 
-![Joins types](https://github.com/user-attachments/assets/e2bf8b95-fa1c-4911-92db-6b4411cec14a)
+![460017715-e2bf8b95-fa1c-4911-92db-6b4411cec14a](https://github.com/user-attachments/assets/2cf772e2-37e3-41f6-ab11-61f59057c0d9)
+
+
 
