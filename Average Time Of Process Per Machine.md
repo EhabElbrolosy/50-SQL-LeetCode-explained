@@ -48,3 +48,18 @@ FROM process_durations
 GROUP BY machine_id;
 
 ```
+
+---
+
+طريقة تالتة باستخدام self join
+```sql
+SELECT M1.machine_id, round(
+avg(M1.timestamp - M2.timestamp)::NUMERIC,3) as processing_time
+FROM activity M1 JOIN activity M2
+ON M1.machine_id = M2.machine_id
+and M1.process_id = M2.process_id
+and M1.activity_type = 'end'
+and M2.activity_type = 'start'
+GROUP BY M1.machine_id
+order by processing_time
+```
