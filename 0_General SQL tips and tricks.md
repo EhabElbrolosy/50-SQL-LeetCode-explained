@@ -153,7 +153,16 @@ SELECT name, id, COUNT(*) FROM table_name GROUP BY name, id;
 
 ---
 
-###  6.remove duplicates
+### 6.SQL Typing Pattern
+
+ ترتيب الكتابة بيبقى 
+ ```WHERE ---> GROUP BY ---> HAVING ---> ORDER BY ---> LIMIT ```
+
+ لو كتبت مثلا group by قبل where هيقولي error 
+ 
+ ---
+
+###  7.remove duplicates
 لو عايز تحذف الصفوف المكررة وتسيب أول صف بس ممكن استخدم ROW_NUMBER() وفلتر على اللي رقمه أكر من 1
 ولازم تحطها في CTE أو subquery.
 ```sql
@@ -167,7 +176,7 @@ DELETE FROM Person WHERE id IN (
 ```
 ---
 
-### 7.Alias name for subquery
+### 8.Alias name for subquery
    لما بعمل subquery داخل  FROM  لازم أديها alias name وإلا هتطلعلك error
 ```sql
 select * from (select name from table) as alisa_name
@@ -175,20 +184,20 @@ select * from (select name from table) as alisa_name
 عشان بيتعامل مع الsubquery على انه جدول مؤقت ولازم يكون الجدول له اسم
 
 ---
-### 8. Declaring a variable (SQL server)
+### 9. Declaring a variable (SQL server)
 في العادي لما بنفترض variable بقيمة معينة بنكتب ```set @variable = value``` ولتكن رقم ثابت مثلا
 بس لو عايزين الvalue دي تبقى query هنكتب 
 ```sql
 select @variable = select col1,col2 from table_name
 ```
 ---
-### 9.Case order
+### 10.Case order
 
 لو بنكتب case أي استثناء أو حالة شاذة لازم يتحط في الأول عشان ما يتغطاش بالشروط اللي قبله
 
 ---
 
-### 10.second highest value
+### 11.second highest value
 لو عايز اجيب تاني أعلى قيمة مممن استخدم offset
 ```sql
 SELECT id FROM student
@@ -198,7 +207,7 @@ OFFSET 1 LIMIT 1;
 كدا هيعمل skip لأول قيمة ويخش في اللي بعدها 
 
 ---
-### 11.LEAST() and GREATEST()
+### 12.LEAST() and GREATEST()
 
 LEAST(a, b)
 
@@ -218,7 +227,7 @@ MAX(col)
 
 
 ---
-### 12.calculating median
+### 13.calculating median
 
 لو عايز احسب الmedian او الوسيط هستخدم ```percentile_cont(0.5) within group```
 ```sql
@@ -231,7 +240,7 @@ FROM
 
 ---
 
-### 13.counting NULL values
+### 14.counting NULL values
 
 كل دوال التجميع زي sum, avg, count بتتجاهل الnulls 
 معادا count(*) دي بتعد كل الصفوف حتى لو كانت null
@@ -243,14 +252,14 @@ select count(*) - count(name) from...
 دا هيطلع عدد القيم الnull بس
 
 ---
-### 14.WHERE clause and nulls
+### 15.WHERE clause and nulls
 
 جملة WHERE مش تعرض الصفوف اللي نتيجة الشرط فيها NULL، لأنها تعتبرها UNKNOWN مش TRUE
 لو عايز تظهر الصفوف اللي فيها NULL، لازم تستخدم IS NULL أو IS NOT NULL
 
 ---
 
-### 15.Join types
+### 16.Join types
 
 ![Joins types](https://github.com/user-attachments/assets/e2bf8b95-fa1c-4911-92db-6b4411cec14a)
 
