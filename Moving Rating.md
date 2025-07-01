@@ -50,8 +50,8 @@ WHERE TO_CHAR(created_at, 'yyyy-mm') = '2020-02'
 بيحول فورمات التاريخ لشهر وسنة او حسب منا عايز
 
 لو شغال sql server : 
-```
-WHERE FORMAT(created_at, 'yyyy-MM') = '2020-02'
+```sql
+`WHERE FORMAT(created_at, 'yyyy-MM') = '2020-02'
 ```
 
 طريقة تانية باستخدام like
