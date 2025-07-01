@@ -197,7 +197,28 @@ OFFSET 1 LIMIT 1;
 ```
 كدا هيعمل skip لأول قيمة ويخش في اللي بعدها 
 
-### 11.calculating median
+---
+### 11.LEAST() and GREATEST()
+
+LEAST(a, b)
+
+قيم في نفس الصف (أعمدة)	أصغر قيمة بين العمودين أو أكثر
+
+GREATEST(a, b)
+
+قيم في نفس الصف (أعمدة)	أكبر قيمة بينهم
+
+MIN(col)
+
+عدة صفوف	أصغر قيمة داخل العمود كله
+
+MAX(col)
+
+عدة صفوف	أكبر قيمة داخل العمود كله
+
+
+---
+### 12.calculating median
 
 لو عايز احسب الmedian او الوسيط هستخدم ```percentile_cont(0.5) within group```
 ```sql
@@ -210,7 +231,7 @@ FROM
 
 ---
 
-### 12.counting NULL values
+### 13.counting NULL values
 
 كل دوال التجميع زي sum, avg, count بتتجاهل الnulls 
 معادا count(*) دي بتعد كل الصفوف حتى لو كانت null
@@ -222,14 +243,14 @@ select count(*) - count(name) from...
 دا هيطلع عدد القيم الnull بس
 
 ---
-### 13.WHERE clause and nulls
+### 14.WHERE clause and nulls
 
 جملة WHERE مش تعرض الصفوف اللي نتيجة الشرط فيها NULL، لأنها تعتبرها UNKNOWN مش TRUE
 لو عايز تظهر الصفوف اللي فيها NULL، لازم تستخدم IS NULL أو IS NOT NULL
 
 ---
 
-### 14.Join types
+### 15.Join types
 
 ![Joins types](https://github.com/user-attachments/assets/e2bf8b95-fa1c-4911-92db-6b4411cec14a)
 
