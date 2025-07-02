@@ -1,7 +1,7 @@
 ## _Fix Names in a Table_
 
 ```sql
-SELECT
+select 
     user_id,
     CONCAT(
         UPPER(
