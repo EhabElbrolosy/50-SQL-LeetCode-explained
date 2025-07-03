@@ -51,3 +51,5 @@ SELECT nullif( (select ...... ),null) as SecondHighestSalary
   );
 ```
 اكبر salary لا يساوي max(salary)
+
+![WhatsApp Image 2025-06-28 at 19 22 16_85ec0c7f](https://github.com/user-attachments/assets/ed509c2b-d7d1-4857-a660-d5148f42065a)
