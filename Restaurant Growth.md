@@ -15,7 +15,7 @@ offset 6
 المطلوب اننا نعرض حاجتين : 
 cumulative amount paid : يعني مجموع المدفوعات التراكمي
 
-cumulative average amount paid : متوسط المدفوعات التراكمي
+و cumulative average amount paid : متوسط المدفوعات التراكمي
 
 بس في خلال الاسبوع اللي فات فقط
 
