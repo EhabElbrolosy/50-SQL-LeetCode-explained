@@ -41,7 +41,18 @@ GROUP BY project_id
                                         | 1          | 2             |
                                         | 2          | 2.5           |
 ---
-# نفس الحل باستخدام CTE
+# حل تاني مباشر ومختصر اكتر ( أنصح بيه )
+
+```sql
+SELECT project_id, round(AVG(experience_years), 2) AS average_years
+FROM peoject P INNER JOIN employee e
+ON p.employee_id = e.employee_id
+GROUP BY project_id
+```
+
+
+---
+# نفس الحل اللي فوق باستخدام CTE
 ```sql
 WITH CTE as(
 SELECT
