@@ -356,5 +356,59 @@ select count(*) - count(name) from...
 
 ![460017715-e2bf8b95-fa1c-4911-92db-6b4411cec14a](https://github.com/user-attachments/assets/2cf772e2-37e3-41f6-ab11-61f59057c0d9)
 
+---
 
+### 18.CREATE, UPDATE, DELETE
 
+ أولًا: التعامل مع هيكل الجدول (Structure)
+ 1. إضافة عمود جديد إلى جدول:
+```sql
+ALTER TABLE Employees
+ADD Salary INT;
+```
+ 2. تعديل نوع بيانات عمود موجود:
+```sql
+ALTER TABLE Employees
+ALTER COLUMN Salary DECIMAL(10,2);\
+```
+ 3. حذف عمود:
+```sql
+ALTER TABLE Employees
+DROP COLUMN Salary;
+```
+ ثانيًا: التعامل مع البيانات داخل الجدول
+ 4. إضافة صف (بيانات جديدة):
+```sql
+INSERT INTO Employees (ID, Name, Age)
+VALUES (1, 'Ahmed', 30);
+```
+ 5. تعديل بيانات صف معين:
+```sql
+UPDATE Employees
+SET Age = 31
+WHERE ID = 1;
+```
+ 6. حذف صف معين:
+```sql
+DELETE FROM Employees
+WHERE ID = 1;
+```
+ ثالثًا: أوامر إضافية سريعة
+ 7. حذف كل البيانات من الجدول (مع بقاء الهيكل):
+```sql
+DELETE FROM Employees;
+```
+أو:
+
+```sql
+TRUNCATE TABLE Employees;
+ TRUNCATE أسرع، لكنه ما بيسمحش بـ WHERE ولا بيرجع صفوف محذوفة.
+```
+ 8. إنشاء جدول جديد:
+```sql
+CREATE TABLE Employees (
+  ID INT PRIMARY KEY,
+  Name NVARCHAR(100),
+  Age INT
+);
+```
